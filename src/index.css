@@ -1,0 +1,45 @@
+@import './styles/variables.css';
+@import './styles/navbar.css';
+@import './styles/hero.css';
+@import './styles/countdown.css';
+@import './styles/couple.css';
+@import './styles/wishes.css';
+@import './styles/sendWishes.css';
+@import './styles/schedule.css';
+@import './styles/location.css';
+@import './styles/footer.css';
+@import './styles/modal.css';
+@import './styles/privacy.css';
+@import './styles/floating.css';
+@import './styles/aboutPage.css';
+@import './styles/gallery.css';
+
+/* Global utilities & animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

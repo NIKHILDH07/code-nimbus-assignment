@@ -1,0 +1,52 @@
+:root {
+  --font-cursive: 'Arizonia', cursive;
+  --font-serif: 'Lora', serif;
+  --font-flamenco: 'Flamenco', cursive;
+  --font-fjalla: 'Fjalla One', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
+  --font-merriweather: 'Merriweather', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-rose: #9e5a61;
+  --color-rose-hover: #b46b73;
+  --color-olive: #697358;
+  --color-olive-light: #a3a99d;
+  --color-gold-dark: #977B45;
+  --color-gold-light: #D9CCB7;
+  --color-primary-purple: #35004D;
+  --color-blue: #0088FF;
+  --color-text-gray: #64748B;
+  --color-light-gray: #94A3B8;
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+
+  --bg-gradient: linear-gradient(180deg, #ffffff 18.75%, #f3e4e4);
+  --bg-gradient-location: linear-gradient(180deg, #ffffff, #f8f1ee 45%, #f1e1e1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: #fff;
+  color: #333;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nimbus-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

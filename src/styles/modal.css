@@ -1,0 +1,237 @@
+.shared-modal-overlay {
+  --sf-primary: #35004D;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: modalFadeIn 0.25s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.shared-modal-card {
+  background: #fff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  animation: modalScaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes modalScaleUp {
+  0% { opacity: 0; transform: scale(0.92) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.shared-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 24px 16px;
+}
+
+.shared-modal-header-container {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.shared-modal-icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #35004D;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.shared-modal-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shared-modal-heading {
+  margin: 0;
+  font-family: var(--font-merriweather);
+  font-weight: 700;
+  font-size: 2rem;
+  color: #111827;
+}
+
+.shared-modal-subtext {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  color: #6b7280;
+}
+
+.shared-modal-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #9ca3af;
+  font-size: 2.2rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.shared-modal-close-btn:hover {
+  color: #111827;
+}
+
+.shared-modal-content-area {
+  padding: 0 24px 24px;
+}
+
+.shared-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.shared-modal-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.shared-modal-label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #374151;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.shared-modal-label span {
+  color: #ef4444;
+}
+
+.shared-modal-select,
+.shared-modal-textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  color: #1f2937;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.shared-modal-select:focus,
+.shared-modal-textarea:focus {
+  border-color: #35004D;
+  box-shadow: 0 0 0 3px rgba(53, 0, 77, 0.12);
+}
+
+.shared-modal-textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.shared-modal-form-info {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.shared-modal-char-count {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  font-family: var(--font-sans);
+}
+
+.shared-modal-submit-btn {
+  width: 100%;
+  height: 48px;
+  background: #35004D;
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease;
+  margin-top: 6px;
+}
+
+.shared-modal-submit-btn:hover {
+  background: #4a006b;
+}
+
+.shared-modal-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.shared-modal-footer {
+  background: #f9fafb;
+  border-top: 1px solid #E5E7EB;
+  padding: 14px;
+  text-align: center;
+}
+
+.shared-modal-footer-text {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  letter-spacing: 1.2px;
+  color: #9ca3af;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.shared-modal-success {
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.shared-modal-success h3 {
+  font-family: var(--font-merriweather);
+  font-size: 2.2rem;
+  color: #111827;
+  margin: 0;
+}
+
+.shared-modal-success p {
+  font-family: var(--font-sans);
+  font-size: 1.4rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.5;
+}

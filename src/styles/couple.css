@@ -1,0 +1,292 @@
+#eng007-about-couple-section {
+  position: relative;
+  min-height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fff 18.75%, #f3e4e4);
+  align-content: center;
+}
+
+#eng007-about-couple-section .nimbus-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.eng007-about-couple-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.eng007-about-couple-left,
+.eng007-about-couple-right {
+  position: absolute;
+  width: 30%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.eng007-about-couple-left {
+  top: 0;
+  left: 0;
+}
+
+.eng007-about-couple-right {
+  bottom: 0;
+  right: 0;
+}
+
+.eng007-about-couple-left img,
+.eng007-about-couple-right img {
+  display: block;
+  width: 100%;
+}
+
+.eng007-about-couple-container {
+  display: flex;
+  flex-direction: column;
+  gap: 13rem;
+  padding: 6rem 4rem;
+  position: relative;
+  z-index: 2;
+  margin-top: 10%;
+}
+
+.eng007-about-couple-bride,
+.eng007-about-couple-groom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7rem;
+}
+
+.eng007-about-couple-bride-img,
+.eng007-about-couple-groom-img {
+  position: relative;
+  flex-shrink: 0;
+  height: 250px;
+  aspect-ratio: 3/4;
+}
+
+.eng007-about-couple-bride-img:before,
+.eng007-about-couple-bride-img:after,
+.eng007-about-couple-groom-img:before,
+.eng007-about-couple-groom-img:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.eng007-about-couple-bride-img:before {
+  border: 2px solid #977B45;
+  transform: translate(15px, -10px);
+  z-index: 1;
+  height: 104%;
+}
+
+.eng007-about-couple-bride-img:after {
+  border: 2px solid #D9CCB7;
+  transform: translate(-10px, -2px);
+  width: 110%;
+  z-index: 0;
+  height: 105%;
+}
+
+.eng007-about-couple-groom-img:before {
+  border: 2px solid #977B45;
+  transform: translate(-15px, -10px);
+  z-index: 1;
+  height: 104%;
+}
+
+.eng007-about-couple-groom-img:after {
+  border: 2px solid #D9CCB7;
+  transform: translate(0);
+  width: 105%;
+  z-index: 0;
+  height: 105%;
+}
+
+.eng007-couple-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.eng007-about-couple-bride .eng007-couple-photo {
+  object-position: center top;
+}
+
+.eng007-about-couple-groom .eng007-couple-photo {
+  object-position: 20% top;
+}
+
+.eng007-bride-side {
+  position: absolute;
+  right: -74px;
+  top: -70px;
+  width: 62%;
+  z-index: 4;
+  display: block;
+  pointer-events: none;
+}
+
+.eng007-groom-side {
+  position: absolute;
+  left: -74px;
+  top: -70px;
+  width: 65%;
+  z-index: 4;
+  display: block;
+  pointer-events: none;
+}
+
+.eng007-about-couple-bride-info,
+.eng007-about-couple-groom-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.eng007-about-couple-bride-info {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.eng007-about-couple-groom-info {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.eng007-couple-name {
+  font-family: Arizonia, cursive;
+  color: #9e5a61;
+  font-size: 5rem;
+  margin: 0;
+  line-height: 1;
+  padding: 0 1rem 0 0;
+}
+
+.eng007-couple-parents {
+  font-family: Lora, serif;
+  color: #9e5a61;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.eng007-couple-desc {
+  font-family: Lora, serif;
+  color: #697358;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 420px;
+}
+
+.eng007-bride-leaf,
+.eng007-groom-leaf {
+  display: block;
+  width: 80px;
+}
+
+@media (max-width: 768px) {
+  .eng007-about-couple-container {
+    gap: 10rem;
+    padding: 4rem 2.5rem;
+    margin-top: 8%;
+  }
+  .eng007-about-couple-bride,
+  .eng007-about-couple-groom {
+    gap: 7rem;
+  }
+  .eng007-about-couple-bride-img,
+  .eng007-about-couple-groom-img {
+    height: 200px;
+  }
+  .eng007-couple-name {
+    font-size: 4rem;
+  }
+  .eng007-couple-parents {
+    font-size: 2.3rem;
+  }
+  .eng007-couple-desc {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .eng007-about-couple-left,
+  .eng007-about-couple-right {
+    width: 24%;
+  }
+  .eng007-bride-side {
+    right: -40px;
+    top: -40px;
+    width: 50%;
+  }
+  .eng007-groom-side {
+    left: -40px;
+    top: -40px;
+    width: 50%;
+  }
+  .eng007-bride-leaf,
+  .eng007-groom-leaf {
+    width: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  .eng007-about-couple-container {
+    gap: 5rem;
+    padding: 9rem 1.5rem;
+    margin-top: 6%;
+  }
+  .eng007-about-couple-bride,
+  .eng007-about-couple-groom {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .eng007-about-couple-groom {
+    flex-direction: column-reverse;
+  }
+  .eng007-about-couple-bride-img,
+  .eng007-about-couple-groom-img {
+    height: 220px;
+  }
+  .eng007-about-couple-bride-info,
+  .eng007-about-couple-groom-info {
+    align-items: center;
+    text-align: center;
+  }
+  .eng007-couple-name {
+    font-size: 4rem;
+  }
+  .eng007-couple-parents {
+    font-size: 2.2rem;
+  }
+  .eng007-couple-desc {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .eng007-about-couple-left,
+  .eng007-about-couple-right {
+    width: 35%;
+  }
+  .eng007-bride-leaf,
+  .eng007-groom-leaf {
+    width: 50px;
+  }
+}
+

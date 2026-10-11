@@ -1,0 +1,142 @@
+#eng007-countdown-section {
+  position: relative;
+  min-height: 65dvh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fff 18.75%, #f3e4e4);
+}
+
+#eng007-countdown-section .nimbus-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.eng007-countdown-topleft,
+.eng007-countdown-bottomright {
+  position: absolute;
+  width: 22%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.eng007-countdown-topleft {
+  top: 0;
+  left: 0;
+}
+
+.eng007-countdown-bottomright {
+  bottom: 0;
+  right: 0;
+}
+
+.eng007-countdown-topleft img,
+.eng007-countdown-bottomright img {
+  display: block;
+  width: 100%;
+}
+
+.eng007-countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+  padding: 4rem 2rem;
+  width: 80%;
+}
+
+.eng007-countdown-title {
+  font-family: Arizonia, cursive;
+  color: #9e5a61;
+  font-size: 5rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+#eng007-countdown-section .shared-countdown.eng007-countdown {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  width: 80%;
+}
+
+#eng007-countdown-section .eng007-countdown .time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+
+#eng007-countdown-section .eng007-countdown .num {
+  font-family: Arizonia, cursive;
+  color: #9e5a61;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+#eng007-countdown-section .eng007-countdown .label {
+  font-family: Lora, serif;
+  color: #697358;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+#eng007-countdown-section:before {
+  content: "";
+  position: absolute;
+  inset: var(--border-inset, 25px);
+  border: 2px solid #977B45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#eng007-countdown-section:after {
+  content: "";
+  position: absolute;
+  inset: 50px;
+  border: 1px solid #D9CCB7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  #eng007-countdown-section {
+    min-height: 50dvh;
+  }
+  #eng007-countdown-section:before {
+    inset: 2.5%;
+  }
+  #eng007-countdown-section:after {
+    inset: 5%;
+  }
+  .eng007-countdown-topleft,
+  .eng007-countdown-bottomright {
+    width: 18%;
+  }
+  .eng007-countdown-title {
+    font-size: 3.2rem;
+  }
+  #eng007-countdown-section .eng007-countdown .num {
+    font-size: 4rem;
+  }
+  #eng007-countdown-section .eng007-countdown .label {
+    font-size: 1.8rem;
+  }
+  #eng007-countdown-section .shared-countdown.eng007-countdown {
+    gap: 2rem;
+    width: 100%;
+  }
+}
+

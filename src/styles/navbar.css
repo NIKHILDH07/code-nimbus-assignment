@@ -1,0 +1,66 @@
+.eng007-shared-navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.eng007-shared-navbar-container .shared-navbar.eng007-navbar {
+  position: relative;
+  top: unset;
+  left: unset;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 16px 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  margin: 0;
+  list-style: none;
+}
+
+.eng007-shared-navbar-container .shared-nav-item {
+  flex: unset;
+  min-height: unset;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.eng007-shared-navbar-container,
+.shared-navbar .shared-nav-item .nav-label {
+  font-family: Lora, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: #9e5a61;
+  margin-top: 0;
+  transition: color 0.2s ease;
+}
+
+.eng007-shared-navbar-container .eng007-active .nav-label {
+  color: #697358;
+  font-weight: 600;
+}
+
+.eng007-shared-navbar-container .shared-nav-item:not(.eng007-active):hover .nav-label {
+  color: #ddafb4;
+}
+
+@media (max-width: 480px) {
+  .eng007-shared-navbar-container .shared-navbar.eng007-navbar {
+    gap: 1.8rem;
+    padding: 18px 0;
+  }
+  .eng007-shared-navbar-container .nav-label {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}
+

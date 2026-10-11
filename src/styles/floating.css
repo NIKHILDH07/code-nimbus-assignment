@@ -1,0 +1,111 @@
+#music-btn-main {
+  position: fixed;
+  z-index: 100;
+  bottom: 3rem;
+  right: 3rem;
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 50%;
+  padding: 0.6rem;
+  background: var(--color-rose);
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(158, 90, 97, 0.4);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+#music-btn-main:hover {
+  transform: scale(1.08);
+  background: var(--color-rose-hover);
+  box-shadow: 0 8px 25px rgba(158, 90, 97, 0.5);
+}
+
+#music-btn-main:active {
+  transform: scale(0.96);
+}
+
+#music-btn-main svg {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+#call-btn {
+  position: fixed;
+  z-index: 100;
+  bottom: 10rem;
+  right: 3rem;
+  height: 5.6rem;
+  width: 5.6rem;
+  border-radius: 50%;
+  padding: 0.6rem;
+  background: var(--color-rose);
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(158, 90, 97, 0.4);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+#call-btn:hover {
+  transform: scale(1.08);
+  background: var(--color-rose-hover);
+  box-shadow: 0 8px 25px rgba(158, 90, 97, 0.5);
+}
+
+#call-btn:active {
+  transform: scale(0.96);
+}
+
+#call-btn svg {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.music-waves {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+}
+
+.music-bar {
+  width: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  animation: musicWave 1s ease-in-out infinite alternate;
+}
+
+.music-bar:nth-child(1) { height: 8px; animation-delay: 0.1s; }
+.music-bar:nth-child(2) { height: 16px; animation-delay: 0.3s; }
+.music-bar:nth-child(3) { height: 22px; animation-delay: 0.2s; }
+.music-bar:nth-child(4) { height: 12px; animation-delay: 0.4s; }
+
+@keyframes musicWave {
+  0% { transform: scaleY(0.4); }
+  100% { transform: scaleY(1.1); }
+}
+
+@media (max-width: 768px) {
+  #music-btn-main {
+    bottom: 2rem;
+    right: 2rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  #call-btn {
+    bottom: 8rem;
+    right: 2rem;
+    height: 5rem;
+    width: 5rem;
+  }
+}

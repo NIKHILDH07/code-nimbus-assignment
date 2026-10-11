@@ -1,0 +1,241 @@
+#eng007-wishes-section {
+  position: relative;
+  min-height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fff 18.75%, #f3e4e4);
+  justify-content: center;
+  align-items: center;
+}
+
+#eng007-wishes-section .nimbus-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.eng007-wishes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4.5rem;
+  padding: 5rem 4rem;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  width: 90%;
+  max-width: 960px;
+  margin: 3% auto;
+}
+
+.eng007-wishes-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.eng007-wishes-quotation {
+  display: block;
+  width: 100px;
+}
+
+.eng007-wishes-title {
+  font-family: Arizonia, cursive;
+  color: #9e5a61;
+  font-size: 7rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.eng007-wishes-shared-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: min(680px, 80%);
+  text-align: center;
+}
+
+.eng007-wishes-container-message-wrapper {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.eng007-wishes-message {
+  font-family: Lora, serif;
+  color: #9e5a61;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+.eng007-wishes-author {
+  font-family: Lora, serif;
+  color: #697358;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 5% 0 0;
+  text-align: center;
+  letter-spacing: .5px;
+}
+
+.eng007-wishes-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: .4rem;
+  font-size: 18px;
+  color: #697358;
+  font-family: Lora, serif;
+}
+
+.eng007-change-btn {
+  font-size: 20px;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #697358;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  background: linear-gradient(180deg, #fff 18.75%, #f3e4e4);
+  transition: all 0.25s ease;
+}
+
+.eng007-change-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  color: #9e5a61;
+}
+
+.eng007-wishes-flower-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.eng007-wishes-flower {
+  display: block;
+  width: 180px;
+}
+
+.eng007-wishes-border-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.eng007-wishes-border-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.eng007-wishes-border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.eng007-wishes-border-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#eng007-wishes-section:before,
+#eng007-wishes-section:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+#eng007-wishes-section:before {
+  inset: 9vh 6vw;
+  border: 2px solid #977B45;
+  z-index: 2;
+}
+
+#eng007-wishes-section:after {
+  inset: calc(9vh + 8px) calc(6vw + 8px);
+  border: 2px solid #D9CCB7;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .eng007-wishes-border-left,
+  .eng007-wishes-border-right {
+    width: 43px;
+    height: 100%;
+  }
+  .eng007-wishes-border-top,
+  .eng007-wishes-border-bottom {
+    width: 900px;
+  }
+  #eng007-wishes-section:before {
+    inset: 7vh 50px;
+  }
+  #eng007-wishes-section:after {
+    inset: calc(7vh + 8px) 58px;
+  }
+  .eng007-wishes-container {
+    gap: 4rem;
+    padding: 4rem 2rem;
+    width: 80%;
+    margin: 10% auto;
+  }
+  .eng007-wishes-title {
+    font-size: 5rem;
+  }
+  .eng007-wishes-quotation {
+    width: 70px;
+  }
+  .eng007-wishes-message {
+    font-size: 2rem;
+  }
+  .eng007-wishes-author {
+    font-size: 2.6rem;
+  }
+  .eng007-wishes-flower {
+    width: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .eng007-wishes-container-message-wrapper {
+    height: 250px;
+  }
+}
+
